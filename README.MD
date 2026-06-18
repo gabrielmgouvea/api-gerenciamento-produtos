@@ -41,7 +41,7 @@ pytest --cov=routers --cov=models --cov=main -v
 ### Saída Esperada do Pytest
 Abaixo está a comprovação da execução da suíte, que contempla **14 funções de teste** (superando o mínimo exigido) e atinge **98% de cobertura** de código:
 
-![Saída do Pytest]
+![Saída do Pytest](resultado-testes.png)
 
 ---
 
