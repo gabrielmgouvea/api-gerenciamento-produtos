@@ -3,7 +3,7 @@
 Esta é uma API RESTful desenvolvida com **FastAPI**, modelagem de dados via **SQLAlchemy (PostgreSQL)** e testada automatizadamente com **Pytest**.
 
 **Detalhes da Implementação:**
-Além do CRUD básico solicitado, aproveitei para organizar o projeto usando algumas práticas comuns para facilitar a manutenção:
+Além do CRUD básico, aproveitei e organizei o projeto usando algumas práticas comuns para facilitar a manutenção:
 
 - **Organização:** Separei as responsabilidades em `models.py`, `schemas.py`, `database.py` e rotas em `routers/produtos.py`.
 - **Paginação:** Adicionei `skip` e `limit` na listagem de produtos.
