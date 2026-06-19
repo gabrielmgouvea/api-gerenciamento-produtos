@@ -2,16 +2,13 @@
 
 Esta é uma API RESTful desenvolvida com **FastAPI**, modelagem de dados via **SQLAlchemy (PostgreSQL)** e testada automatizadamente com **Pytest**.
 
-**Diferenciais Implementados (Pensando Fora da Caixa):**
-Embora os requisitos base fossem de um CRUD simples, a aplicação foi desenhada visando padrões rigorosos de mercado e resiliência:
+**Detalhes da Implementação:**
+Além do CRUD básico solicitado, aproveitei para organizar o projeto usando algumas práticas comuns para facilitar a manutenção:
 
-- **Arquitetura Modular:** Separação limpa de responsabilidades em `models.py`, `schemas.py`, `database.py` e rotas em `routers/produtos.py`, facilitando a manutenibilidade.
-- **Prevenção de Conflitos de Ambiente:** O banco de desenvolvimento foi alocado na porta 5434 para evitar colisões com instalações nativas do PostgreSQL no S.O. do desenvolvedor.
-- **Paginação:** Implementada na listagem de produtos (`skip` e `limit`) para evitar sobrecarga no banco de dados em catálogos grandes.
-- **Auditoria:** Campos `created_at` e `updated_at` geridos nativamente no banco de dados.
-- **CORS Middleware:** Configurado para aceitar requisições de clientes web (frontends).
-- **Health/Redirect Root:** A rota raiz (`/`) redireciona automaticamente para o Swagger (`/docs`), melhorando a Developer Experience (DX).
-
+- **Organização:** Separei as responsabilidades em `models.py`, `schemas.py`, `database.py` e rotas em `routers/produtos.py`.
+- **Paginação:** Adicionei `skip` e `limit` na listagem de produtos.
+- **Auditoria:** Incluí campos `created_at` e `updated_at` no banco de dados.
+- **Rotas Extras:** Configurei o CORS e fiz a rota raiz (`/`) redirecionar direto para o Swagger (`/docs`).
 ---
 
 ## 🚀 1. Como subir a Infraestrutura (Docker)
