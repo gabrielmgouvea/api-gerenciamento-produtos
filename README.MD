@@ -8,6 +8,7 @@ Além do CRUD básico, aproveitei e organizei o projeto usando algumas práticas
 - **Organização:** Separei as responsabilidades em `models.py`, `schemas.py`, `database.py` e rotas em `routers/produtos.py`.
 - **Paginação:** Adicionei `skip` e `limit` na listagem de produtos.
 - **Auditoria:** Incluí campos `created_at` e `updated_at` no banco de dados.
+- **Atualização (PATCH):** Implementada a rota `PATCH /produtos/{id}` permitindo a atualização parcial de campos (estoque, preço ou nome) de forma eficiente.
 - **Rotas Extras:** Configurei o CORS e fiz a rota raiz (`/`) redirecionar direto para o Swagger (`/docs`).
 ---
 
@@ -32,13 +33,13 @@ Caso deseje subir o ambiente completo (incluindo o banco de desenvolvimento na p
 Com o container `db_test` rodando com status *(healthy)*, ative seu ambiente virtual e execute a suíte de testes na raiz do projeto. O comando abaixo já inclui a validação de cobertura (coverage):
 
 ```bash
-pytest --cov=routers --cov=models --cov=main -v
+pytest --cov=. -v
 ```
 
 ### Saída Esperada do Pytest
 Abaixo está a comprovação da execução da suíte, que contempla **14 funções de teste** (superando o mínimo exigido) e atinge **98% de cobertura** de código:
 
-![Saída do Pytest](resultado-testes.png)
+![Saída do Pytest](resultados-teste.png)
 
 ---
 
