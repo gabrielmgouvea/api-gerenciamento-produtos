@@ -23,7 +23,7 @@ docker-compose up -d db_test
 
 *(Dica: Confirme se o container está saudável rodando `docker-compose ps` antes de avançar).*
 
-Caso deseje subir o ambiente completo (incluindo o banco de desenvolvimento na porta 5434), utilize apenas `docker-compose up -d`.
+Caso deseje subir o ambiente completo (incluindo o banco de desenvolvimento na porta 5432), utilize apenas `docker-compose up -d`.
 
 ---
 
