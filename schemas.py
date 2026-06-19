@@ -7,6 +7,13 @@ class ProdutoCreate(BaseModel):
     estoque: int = Field(default=0, ge=0)
     ativo: bool = Field(default=True)
 
+# NOVO: Schema para atualização parcial (PATCH)
+class ProdutoUpdate(BaseModel):
+    nome: str | None = Field(None, min_length=1)
+    preco: float | None = Field(None, gt=0)
+    estoque: int | None = Field(None, ge=0)
+    ativo: bool | None = None
+
 class ProdutoResponse(BaseModel):
     id: int
     nome: str
